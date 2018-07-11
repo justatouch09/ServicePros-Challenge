@@ -1,0 +1,36 @@
+.birth {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(39, 140, 223);
+}
+
+/* .ant-table-thead > tr > th {
+  transition: opacity .3s;
+  background:#d44848;
+  color:#d44848;
+  border-bottom: 1px solid #ca4e4e;
+} */
+
+
+.ant-table table {
+  color: rgb(31, 112, 179);
+  background-color: #c5bde4;
+  border-bottom: 1px solid #210808;
+}
+
+.ant-table-column-sorter-down {
+  color: rgb(39, 140, 223);
+}
+
+.ant-table-column-sorter-up {
+  color: rgb(39, 140, 223);
+}
+
+
+.titleBar {
+  background-color: #000;
+  display: block;
+  color: #fff;
+  padding-left: 16px;
+}
+
