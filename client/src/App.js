@@ -48,8 +48,6 @@ class App extends Component {
       dataIndex: 'title',
       key: 'title',
       sorter: (a, b) => a.title < b.title ? -1 : a.title > b.title ? 1 : 0,
-      
-
      // defaultSortOrder: 'ascend',
       //expandRowByClick: 'true'
       //align: 'center'
