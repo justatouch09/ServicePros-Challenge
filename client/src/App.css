@@ -13,7 +13,8 @@
 
 
 .ant-table table {
-  color: rgb(31, 112, 179);
+  color: rgb(51, 148, 228);
+  /* color: rgb(31, 112, 179); */
   background-color: #c5bde4;
   border-bottom: 1px solid #210808;
 }
