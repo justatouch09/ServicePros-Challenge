@@ -3,7 +3,6 @@ import './App.css';
 import axios from 'axios'
 import Table from 'antd/lib/table';
 import 'antd/dist/antd.css';
-//import $ from 'jquery';
 //import BookRow from './BookRow.js';
 
 class App extends Component {
@@ -17,7 +16,6 @@ class App extends Component {
     //this.
   }
 
-  // npm install axios --save
   performSearch = () => {
     axios({
       url: 'http://localhost:5555/books',
