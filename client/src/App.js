@@ -49,26 +49,9 @@ class App extends Component {
     const { searchText, books } = this.state;
 
     if (books) {
-      const reg = new RegExp(searchText, 'gi');
       this.setState({
         filterDropdownVisible: false,
-        filtered: !!searchText,
-        books: books.map((record) => {
-          const match = record.title.match(reg);
-          if (!match) {
-            return null;
-          }
-          return {
-            ...record,
-            name: (
-              <span>
-              {record.title.split(reg).map((text, i) => (
-                i > 0 ? [<span className="highlight">{match[0]}</span>, text] : text
-                ))}
-              </span>
-            ),
-          };
-        }).filter(record => !!record),
+        filtered: !!searchText
       });
     }
   }
@@ -79,6 +62,12 @@ class App extends Component {
     if (!books) {
       return <div />
     }
+
+    const reg = new RegExp(searchText, 'gi');
+    const tableData = books.map((record) => {
+      const match = record.title.match(reg);
+      return !match ? null : record
+    }).filter(record => !!record)
 
     const columns = [
       {
@@ -129,7 +118,7 @@ class App extends Component {
     return (
       <div>
         <div style={{width: 1200, margin:"auto"}}>
-          <Table className="table-source" columns={columns} dataSource={books} />
+          <Table className="table-source" columns={columns} dataSource={tableData} />
         </div>
       </div>
     )

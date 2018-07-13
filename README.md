@@ -1,5 +1,7 @@
 # ServicePros-Challenge
 <h3>Technical Challenge</h3>
+<h2> React and Node.js Project<h2>
+
 
 Step 1)
 Download files
@@ -22,7 +24,7 @@ Step 5)
 -The server is a proxy for the api you provided-
 
 
--Cors was enabled on the api server, this was one way to get around the problem....
+-Cors was not enabled on the api server, this was one way to get around the problem....
 
 Step 6)
 -Open another terminal 
