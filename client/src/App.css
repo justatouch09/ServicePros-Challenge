@@ -1,7 +1,6 @@
-.birth {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: rgb(39, 140, 223);
+.table-source {
+  border-bottom: 2px solid #096dd9;
+  background: #bddce4;
 }
 
 /* .ant-table-thead > tr > th {
@@ -11,12 +10,11 @@
   border-bottom: 1px solid #ca4e4e;
 } */
 
-
 .ant-table table {
-  color: rgb(51, 148, 228);
+  color: rgb(5, 98, 175);
   /* color: rgb(31, 112, 179); */
-  background-color: #c5bde4;
-  border-bottom: 1px solid #210808;
+  background-color: #bddce4;
+  border-bottom: 2px solid #096dd9;
 }
 
 .ant-table-column-sorter-down {
@@ -27,9 +25,8 @@
   color: rgb(39, 140, 223);
 }
 
-
 .titleBar {
-  background-color: #000;
+  background-color:#096dd9;
   display: block;
   color: #fff;
   padding-left: 16px;
