@@ -42,12 +42,7 @@ class App extends Component {
   }
 
   onInputChange = (e) => {
-    this.setState((prevState) => {
-      return {
-        ...prevState,
-        searchText: e.target.value
-      }
-    })
+    this.setState({searchText: e.target.value})
   }
 
   onSearch = () => {
@@ -96,7 +91,7 @@ class App extends Component {
           <div className="custom-filter-dropdown">
             <Input
               ref={ele => this.searchInput = ele}
-              placeholder="Search name"
+              placeholder="Search Title"
               value={searchText}
               onChange={this.onInputChange}
               onPressEnter={this.onSearch}
