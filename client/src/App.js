@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios'
-import { Table, Input, Button, Icon } from 'antd/lib';
 import 'antd/dist/antd.css';
+import { Table, Input, Button, Icon } from 'antd';
 
 class App extends Component {
 
@@ -10,8 +10,8 @@ class App extends Component {
     super(props)
 
     this.state = {
-      books: null,
       filterDropdownVisible: false,
+      books: null,
       searchText: '',
       filtered: false
     }
@@ -62,9 +62,8 @@ class App extends Component {
             ...record,
             name: (
               <span>
-                {record.title.split(new RegExp(`(?<=${searchText})|(?=${searchText})`, 'i')).map((text, i) => (
-                  text.toLowerCase() === searchText.toLowerCase()
-                    ? <span key={i} className="highlight">{text}</span> : text
+              {record.title.split(reg).map((text, i) => (
+                i > 0 ? [<span className="highlight">{match[0]}</span>, text] : text
                 ))}
               </span>
             ),
@@ -103,9 +102,8 @@ class App extends Component {
         filterDropdownVisible: filterDropdownVisible,
         onFilterDropdownVisibleChange: (visible) => {
           this.setState({
-            ...this.state,
-            filterDropdownVisible: visible
-          }, () => this.searchInput && this.searchInput.focus());
+            filterDropdownVisible: visible,
+          }, () => this.searchInput.focus());
         }
       },
       {
@@ -131,7 +129,7 @@ class App extends Component {
     return (
       <div>
         <div style={{width: 1200, margin:"auto"}}>
-          <Table className="table-source" dataSource={books} columns={columns} />
+          <Table className="table-source" columns={columns} dataSource={books} />
         </div>
       </div>
     )
