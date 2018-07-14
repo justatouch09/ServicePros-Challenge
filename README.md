@@ -2,6 +2,9 @@
 <h3>Technical Challenge</h3>
 <h2> React and Node.js Project</h2>
 
+<h2>Make sure you have node.js installed
+    I'm using v10.4.1
+    https://nodejs.org/en/</h2>
 
 Step 1)
 Download files
